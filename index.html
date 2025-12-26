@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Style Product Display</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bag-fill"></i> AmazonStyle
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <select class="form-select" style="max-width: 120px; border-radius: 4px 0 0 4px; border: none;"
+                            aria-label="Search category">
+                            <option>All</option>
+                            <option>Electronics</option>
+                            <option>Books</option>
+                            <option>Clothing</option>
+                            <option>Home & Kitchen</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="Search for products...">
+                        <button class="btn" type="button" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-person"></i> Account
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-cart3"></i> Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg secondary-nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryNavbar"
+                aria-controls="secondaryNavbar" aria-expanded="false" aria-label="Toggle secondary navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="secondaryNavbar">
+                <ul class="navbar-nav d-flex flex-row flex-wrap">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-list"></i> All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Today's Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customer Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gift Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sell</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <!-- Carousel -->
+        <div class="carousel-container">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=300&fit=crop"
+                            class="d-block w-100" alt="Deal 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Special Deals on Electronics</h5>
+                            <p>Up to 50% off on selected items</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&h=300&fit=crop"
+                            class="d-block w-100" alt="Deal 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>New Arrivals</h5>
+                            <p>Check out our latest collection</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=300&fit=crop"
+                            class="d-block w-100" alt="Deal 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Flash Sale</h5>
+                            <p>Limited time offers - Shop now!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev" aria-label="Previous slide">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next" aria-label="Next slide">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Featured Products Section -->
+        <div class="section-title">
+            <h3>Featured Products</h3>
+        </div>
+        <div class="products-container">
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 1">
+                        <a href="#" class="product-title">Wireless Bluetooth Headphones with Noise Cancellation</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted">(1,234)</span>
+                        </div>
+                        <div class="product-price">$79.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 2">
+                        <a href="#" class="product-title">Smart Watch with Fitness Tracker and Heart Rate Monitor</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted">(856)</span>
+                        </div>
+                        <div class="product-price">$129.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 3">
+                        <a href="#" class="product-title">Premium Laptop Backpack with USB Charging Port</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted">(2,456)</span>
+                        </div>
+                        <div class="product-price">$49.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 4">
+                        <a href="#" class="product-title">Wireless Mouse Ergonomic Design for Comfort</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted">(3,789)</span>
+                        </div>
+                        <div class="product-price">$24.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 5">
+                        <a href="#" class="product-title">Portable Phone Charger 20000mAh Power Bank</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted">(1,567)</span>
+                        </div>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 6">
+                        <a href="#" class="product-title">LED Desk Lamp with USB Port and Touch Control</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted">(987)</span>
+                        </div>
+                        <div class="product-price">$29.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 7">
+                        <a href="#" class="product-title">Mechanical Gaming Keyboard RGB Backlit</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted">(2,134)</span>
+                        </div>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=300&fit=crop"
+                            class="product-image" alt="Product 8">
+                        <a href="#" class="product-title">Bluetooth Speaker Waterproof Portable</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted">(1,456)</span>
+                        </div>
+                        <div class="product-price">$59.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Sellers Section -->
+        <div class="section-title">
+            <h3>Best Sellers</h3>
+        </div>
+        <div class="products-container">
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop"
+                            class="product-image" alt="Best Seller 1">
+                        <a href="#" class="product-title">Premium Wireless Earbuds with Case</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted">(4,567)</span>
+                        </div>
+                        <div class="product-price">$99.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop"
+                            class="product-image" alt="Best Seller 2">
+                        <a href="#" class="product-title">4K Ultra HD Smart TV 55 inch</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted">(3,234)</span>
+                        </div>
+                        <div class="product-price">$599.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop"
+                            class="product-image" alt="Best Seller 3">
+                        <a href="#" class="product-title">Gaming Mouse Pad Large Extended RGB</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted">(2,789)</span>
+                        </div>
+                        <div class="product-price">$19.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop"
+                            class="product-image" alt="Best Seller 4">
+                        <a href="#" class="product-title">USB-C Hub 7-in-1 Adapter for Laptop</a>
+                        <div class="product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted">(1,890)</span>
+                        </div>
+                        <div class="product-price">$39.99</div>
+                        <div class="product-shipping">FREE Shipping</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">
+                <i class="bi bi-arrow-up"></i> Back to top
+            </a>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3 footer-column">
+                        <h6>Get to Know Us</h6>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Our Devices</a></li>
+                            <li><a href="#">Our Science</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3 footer-column">
+                        <h6>Make Money with Us</h6>
+                        <ul>
+                            <li><a href="#">Sell products</a></li>
+                            <li><a href="#">Sell on Amazon</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3 footer-column">
+                        <h6>Amazon Payment Products</h6>
+                        <ul>
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3 footer-column">
+                        <h6>Need Help?</h6>
+                        <ul>
+                            <li><a href="#">COVID-19 and Amazon</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Conditions of Use</a>
+                    <a href="#">Privacy Notice</a>
+                    <a href="#">Your Ads Privacy Choices</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024, AmazonStyle.com, Inc. or its affiliates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
